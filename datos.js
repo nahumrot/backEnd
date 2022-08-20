@@ -24,15 +24,15 @@ export class Usuario {
     }
     countMascotas(){
 
-        console.log( ` Tienes ${this.mascotas.length} mascotas, te felicito!`)
+        console.log( ` Tienes ${this.mascotas.length} mascotas, que lindo!`)
 
     }
     addBook(){
 
         let bucle = 1
         while (bucle <= 1) {
-            let inputLibro = prompt ("ingrese el nombre de su libro favorito:")
-            let inputAutor = prompt ("ingrese el autor de su libro favorito:")
+            let inputLibro = prompt ("ingrese el nombre de su ultimo libro:")
+            let inputAutor = prompt ("ingrese el autor de su ultimo libro:")
             this.libros.push({nombre: inputLibro, autor: inputAutor})
         bucle++
         }
@@ -44,7 +44,11 @@ export class Usuario {
     }
 }
 
-let usuario1 = new Usuario('Eduardo', 'Vargas',[{nombre:'El Quijote de la Mancha', autor:'Miguel de Cervantes'},{nombre:'Harry Potter', autor:'J. K. Rowling'},{nombre:'Papelucho', autor:'Marcela Paz'}],['perro','tortuga','loro'])
+let usuario1 = new Usuario('Roberto', 'Gonzales',
+[{nombre:'El Quijote de la Mancha', autor:'Miguel de Cervantes'},
+{nombre:'Harry Potter', autor:'J. K. Rowling'},
+{nombre:'Papelucho', autor:'Marcela Paz'}],
+['perro','tortuga','loro'])
 
 usuario1.getFullName()
 usuario1.addMascota()
