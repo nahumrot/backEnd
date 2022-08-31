@@ -1,4 +1,4 @@
-export class Usuario {
+/*export class Usuario {
     constructor(nombre, apellido, libros, mascotas){
         this.nombre = nombre
         this.apellido = apellido
@@ -54,4 +54,4 @@ usuario1.getFullName()
 usuario1.addMascota()
 usuario1.countMascotas()
 usuario1.addBook()
-usuario1.getBookNames() 
+usuario1.getBookNames() */
