@@ -1,7 +1,7 @@
 const fs = require('fs')
-const pathToFile = './users.json'
+const pathToFile = './productos.txt'
 
-class Manager {
+class Contenedor {
     save = async (producto) => {    
         if (!producto.title || !producto.price || !producto.thumbnail) return {status: "error", message: "no se han ingresado todos los campos"}
         try {
@@ -71,4 +71,4 @@ class Manager {
     }
 }
 
-module.exports = Manager
+module.exports = Contenedor

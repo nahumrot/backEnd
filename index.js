@@ -1,12 +1,12 @@
-const Manager = require('./manager.js')
-const manager = new Manager()
+const Contenedor = require('./contenedor.js')
+const contenedor = new Contenedor()
 
-let user = {
-    title: "Funda",
-    price: 100,
-    stock: 200,
-    Detalle:"iphone 13 silicon case"
+let producto = {
+    title: "Auricular",
+    price: 20000,
+    stock: 5,
+    thumbnail:"jbl tune 600bt"
 } 
 
-// manager.createUser(user) .then(result => console.log(result)) 
+contenedor.save(producto) .then(result => console.log(result)) 
 // manager.findAll() .then(result => console.log(result)) 
