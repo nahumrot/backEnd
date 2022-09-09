@@ -8,5 +8,6 @@ let producto = {
     thumbnail:"jbl tune 600bt"
 } 
 
-contenedor.save(producto) .then(result => console.log(result)) 
-// manager.findAll() .then(result => console.log(result)) 
+// contenedor.save(producto) .then(result => console.log(result)) 
+// contenedor.getAll() .then(result => console.log(result)) 
+contenedor.getRandom() .then(result => console.log(result)) 
