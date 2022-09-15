@@ -7,5 +7,5 @@ server.on("error", (error) => console.log(`Error en el servidor`));
 
 app.use(express.json());
 app.use('/', express.static('public'))
-app.use('api/products', prodcuctRouter)
+app.use('/api/products', prodcuctRouter)
 
