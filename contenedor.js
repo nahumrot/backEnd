@@ -1,20 +1,44 @@
-const fs = require('fs')
-const pathToFile = './productos.txt'
+let products = require('./routes/products')
 
 class Contenedor {
-        getAll = async () => {
-            let data = await fs.promises.readFile(pathToFile, 'utf-8')
-            let productos = JSON.parse(data)
-            return {productos}
+    create = (products) => {
+        let id = products[products.length-1].id+1
+        product = {
+            id,
+            ...products
         }
-        getRandom = async () => {
-            let data = await fs.promises.readFile(pathToFile, 'utf-8')
-            let productos = JSON.parse(data)
-            let cantidad = productos.length
-            let random = Math.floor(Math.random()* cantidad)+1;
-            let producto = productos.find(producto => producto.id === random)
-            return {producto}
-        }
-}
+        products.push(products)
+        return products
+    }
 
+    findAll = () => {
+        return products
+    }
+
+    findById = (id) => {
+        id = parseInt (id)
+        return products.find(item => item.id === id)
+    }
+
+    update = (id, products) => {
+        id = parseInt(id)
+        let newProducts = products.map(item => {
+            if (item.id === id) {
+                return {
+                    id,
+                    ...products
+                } 
+            } else return item
+        })
+        products = newProducts
+        return this.findById(id)
+    }
+
+    delete = (id) => {
+        id = parseInt (id)
+        let newProducts = products.filter(item => item.id !== id)
+        products=newProducts
+        return products
+    }
+}
 module.exports = Contenedor
