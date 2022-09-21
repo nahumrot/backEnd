@@ -2,43 +2,20 @@ let products = require('./routes/products')
 
 class Contenedor {
     create = (products) => {
-        let id = products[products.length-1].id+1
+        let id 
+        if (products.length === 0) id=1
+        else id= products[products.length-1].id+1
+        product.price = parseInt(product.price)
         product = {
             id,
-            ...products
+            ...product
         }
-        products.push(products)
-        return products
+        products.push(product)
+        return product
     }
 
     findAll = () => {
-        return products
-    }
-
-    findById = (id) => {
-        id = parseInt (id)
-        return products.find(item => item.id === id)
-    }
-
-    update = (id, products) => {
-        id = parseInt(id)
-        let newProducts = products.map(item => {
-            if (item.id === id) {
-                return {
-                    id,
-                    ...products
-                } 
-            } else return item
-        })
-        products = newProducts
-        return this.findById(id)
-    }
-
-    delete = (id) => {
-        id = parseInt (id)
-        let newProducts = products.filter(item => item.id !== id)
-        products=newProducts
-        return products
+        return product
     }
 }
 module.exports = Contenedor
