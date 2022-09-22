@@ -7,7 +7,7 @@ const contenedor = new Contenedor();
 router.get('/',(req,res) => {
     let result = contenedor.findAll()
     res.render('get-products', {
-        products: result
+        products: contenedor.findAll()
     })
 })
 

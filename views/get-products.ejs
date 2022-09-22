@@ -1,2 +1,12 @@
-<% products.forEach(item => {) %>
-    
+<%- incluide('./partials/head') %>
+<% if (products.legth>0){ %>
+    <% products.forEach(item => { %>
+        <div><%= item.title %> </div>
+        <div><%= item.price %> </div>
+        <img src="<%= item.thumbnail %> " width="50%">
+    <% }) %>
+<% } else { %>
+    <p>no hay datos</p>
+<%} %>
+<a href="/" class="btn btn-success"> Crear producto</a>
+<%- incluide('./partials/footer') %>

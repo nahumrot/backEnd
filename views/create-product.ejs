@@ -1,3 +1,4 @@
+<%- incluide('./partials/head') %>
 <h2>Crea un producto</h2>
 <form action="/products" method="post">
     <label > Title:</label>
@@ -8,3 +9,5 @@
     <input name="Thumbnail">
     <button>Enviar</button>
 </form>
+<a href="/products" class="btn btn-success"> Ver los productos</a>
+<%- incluide('./partials/footer') %>
